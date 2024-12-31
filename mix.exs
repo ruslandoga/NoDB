@@ -21,8 +21,13 @@ defmodule NoDB.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:nimble_csv, "~> 1.2"},
+      {:duxdb, github: "ruslandoga/duxdb", only: [:dev, :test]},
+      {:plug_cowboy, "~> 2.7"},
+      {:s3, "~> 0.1.0"},
+      {:postgrex, "~> 0.19.3"},
+      {:telemetry, "~> 1.3"},
+      {:finch, "~> 0.19.0"}
     ]
   end
 end
