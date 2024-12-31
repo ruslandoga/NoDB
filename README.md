@@ -1,17 +1,21 @@
 Experiments with [NoDB](https://stratos.seas.harvard.edu/sites/scholar.harvard.edu/files/stratos/files/nodb-cacm.pdf) ideas.
 
+Insipred by https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html
+
+**tl;dr**
 - CSV on S3
-- Buffered ingestion using:
+- Ingestion:
   - PostgreSQL CDC
   - PostgREST-like API
   - OTEL
+- Upload to S3 every ~5 seconds
 - Queries via S3 proxy for:
   - statistics
   - caching
   - predicate pushdown on virtual columns
 - Dashboards:
   - GitHub Pages
-  - DuckDB-WASM
+  - DuckDB (Wasm)
   - Markdown
 
 ### Examples
@@ -73,7 +77,3 @@ Tools: Telemetry, DuckDB, and Markdown
 - LZ4
 - Parquet
 - Delta / Iceberg
-
-### Inspiration
-
-- https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html
